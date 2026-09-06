@@ -1,15 +1,926 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="refresh" content="0; url=.vscode/Forms%2C%20Tables%20and%20Media%20Elements/index.html">
+
     <title>CodeCraft Academy</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+    <!-- CSS -->
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="icon" type="image/png" href="images/favicon.png">
+
 </head>
+
 <body>
-    <p>Opening CodeCraft Academy...</p>
+
+    <div id="loader">
+        <div class="loader-logo">
+            <i class="fa-solid fa-code"></i>
+            <span>CodeCraft Academy</span>
+        </div>
+
+        <div class="loader-spinner"></div>
+    </div>
+
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+        <i class="fa-solid fa-moon"></i>
+    </button>
+
+    <!-- ===================================================
+                        HERO SECTION
+    ==================================================== -->
+
+    <header class="hero">
+
+        <div class="hero-content">
+
+            <span class="tag">
+
+                <i class="fa-solid fa-graduation-cap"></i>
+
+                Learn • Practice • Build
+
+            </span>
+
+            <h1>
+
+                Build your way into
+                <span>frontend.</span>
+
+            </h1>
+
+            <p>
+
+                Learn the skills behind the screen, then turn them into
+                interfaces people love to use.
+
+            </p>
+
+            <div class="hero-buttons">
+
+                <a href="#registration" class="hero-btn" aria-label="Register for CodeCraft Academy">
+
+                    Join Academy
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </a>
+
+                <a href="#courses" class="secondary-btn" aria-label="View available courses">
+
+                    Explore Courses
+
+                </a>
+
+            </div>
+
+        </div>
+
+        <div class="hero-showcase" aria-label="CodeCraft Academy learning dashboard preview">
+
+            <div class="showcase-orbit showcase-orbit-one"></div>
+            <div class="showcase-orbit showcase-orbit-two"></div>
+
+            <div class="learning-window">
+
+                <div class="window-bar">
+                    <div class="window-dots" aria-hidden="true">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <span class="window-label">my learning space</span>
+                    <i class="fa-solid fa-ellipsis" aria-hidden="true"></i>
+                </div>
+
+                <div class="window-body">
+                    <div class="window-sidebar" aria-hidden="true">
+                        <span class="sidebar-mark"><i class="fa-solid fa-code"></i></span>
+                        <span class="sidebar-item active"><i class="fa-solid fa-table-cells-large"></i></span>
+                        <span class="sidebar-item"><i class="fa-solid fa-compass"></i></span>
+                        <span class="sidebar-item"><i class="fa-solid fa-folder-open"></i></span>
+                    </div>
+
+                    <div class="window-content">
+                        <div class="window-welcome">
+                            <div>
+                                <span class="mini-label">YOUR NEXT BUILD</span>
+                                <h2>Make it responsive.</h2>
+                            </div>
+                            <span class="streak-badge"><i class="fa-solid fa-bolt"></i> 7 day streak</span>
+                        </div>
+
+                        <div class="progress-panel">
+                            <div class="progress-copy">
+                                <span class="mini-label">CURRENT PATH</span>
+                                <strong>CSS Interface Lab</strong>
+                                <span class="progress-meta">Module 03 <b>of</b> 06</span>
+                            </div>
+                            <div class="progress-ring" aria-label="50 percent complete"><span>50%</span></div>
+                        </div>
+
+                        <div class="lesson-list">
+                            <div class="lesson-item complete">
+                                <span class="lesson-icon"><i class="fa-solid fa-check"></i></span>
+                                <span><strong>Layout foundations</strong><small>Completed</small></span>
+                            </div>
+                            <div class="lesson-item current">
+                                <span class="lesson-icon"><i class="fa-solid fa-play"></i></span>
+                                <span><strong>Responsive patterns</strong><small>Continue learning</small></span>
+                                <i class="fa-solid fa-arrow-right lesson-arrow"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="showcase-float showcase-float-top">
+                <span class="float-icon"><i class="fa-solid fa-wand-magic-sparkles"></i></span>
+                <span><b>Project ready</b><small>Portfolio milestone</small></span>
+            </div>
+
+            <div class="showcase-float showcase-float-bottom">
+                <span class="avatar-stack" aria-hidden="true"><i class="fa-solid fa-user"></i></span>
+                <span><b>Learn by shipping</b><small>One build at a time</small></span>
+            </div>
+
+        </div>
+
+        <div class="hero-circle hero-circle-1"></div>
+
+        <div class="hero-circle hero-circle-2"></div>
+
+        <div class="hero-circle hero-circle-3"></div>
+
+        <div class="scroll-indicator">
+
+            <span></span>
+
+        </div>
+
+    </header>
+
+    <!-- ==========================================
+            STATS SECTION
+========================================== -->
+
+    <section class="stats reveal">
+
+        <div class="stat-card">
+
+            <i class="fa-solid fa-route" aria-hidden="true"></i>
+
+            <h2>4</h2>
+
+            <p>Learning Paths</p>
+
+        </div>
+
+        <div class="stat-card">
+
+            <i class="fa-solid fa-laptop-code" aria-hidden="true"></i>
+
+            <h2>10+</h2>
+
+            <p>Projects</p>
+
+        </div>
+
+        <div class="stat-card">
+
+            <i class="fa-solid fa-screwdriver-wrench" aria-hidden="true"></i>
+
+            <h2>100%</h2>
+
+            <p>Practical</p>
+
+        </div>
+
+        <div class="stat-card">
+
+            <i class="fa-solid fa-seedling" aria-hidden="true"></i>
+
+            <h2>Open</h2>
+
+            <p>Beginner Friendly</p>
+
+        </div>
+
+    </section>
+
+    <!-- ==========================================
+                FEATURES
+========================================== -->
+
+    <section class="features reveal">
+
+        <div class="feature-card">
+
+            <div class="feature-top">
+
+                <div class="feature-icon">
+
+                    <i class="fa-solid fa-book-open" aria-hidden="true"></i>
+
+                </div>
+
+                <span class="arrow">
+
+                    <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+
+                </span>
+
+            </div>
+
+            <h3>Structured Courses</h3>
+
+            <p>
+
+                Master HTML5, CSS3, JavaScript and React with a carefully designed learning roadmap.
+
+            </p>
+
+            <a href="#" aria-label="Learn more about structured courses">
+
+                Learn More
+
+                <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+
+            </a>
+
+        </div>
+
+
+
+        <div class="feature-card">
+
+            <div class="feature-top">
+
+                <div class="feature-icon">
+
+                    <i class="fa-solid fa-laptop-code" aria-hidden="true"></i>
+
+                </div>
+
+                <span class="arrow">
+
+                    <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+
+                </span>
+
+            </div>
+
+            <h3>Real Projects</h3>
+
+            <p>
+
+                Build responsive websites and portfolio-ready projects using modern frontend practices.
+
+            </p>
+
+            <a href="#" aria-label="Explore real projects">
+
+                Explore
+
+                <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+
+            </a>
+
+        </div>
+
+
+
+        <div class="feature-card">
+
+            <div class="feature-top">
+
+                <div class="feature-icon">
+
+                    <i class="fa-solid fa-briefcase" aria-hidden="true"></i>
+
+                </div>
+
+                <span class="arrow">
+
+                    <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+
+                </span>
+
+            </div>
+
+            <h3>Career Ready</h3>
+
+            <p>
+
+                Create a professional portfolio and prepare for internships, freelancing and full-time jobs.
+
+            </p>
+
+            <a href="#" aria-label="Start your learning journey">
+
+                Start Now
+
+                <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+
+            </a>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ===================================================
+                    COURSES TABLE
+    ==================================================== -->
+
+    <section class="section reveal" id="courses">
+
+        <div class="section-heading">
+
+            <h2>
+
+                    <i class="fa-solid fa-layer-group" aria-hidden="true"></i>
+
+                Available Courses
+
+            </h2>
+
+            <p>
+
+                Choose the course that matches your learning journey.
+
+            </p>
+
+        </div>
+
+        <div class="course-grid">
+
+            <article class="course-card html-card">
+                <div class="course-card-top">
+                    <div class="course-icon-wrap html-wrap">
+                        <i class="fa-brands fa-html5 course-icon html" aria-hidden="true"></i>
+                    </div>
+                    <span class="course-status open"><span></span> Open</span>
+                </div>
+                <h3>HTML5 Foundations</h3>
+                <p>Build accessible, semantic pages with the markup that powers every modern website.</p>
+                <div class="course-meta">
+                    <span><i class="fa-solid fa-signal" aria-hidden="true"></i> Beginner</span>
+                    <span><i class="fa-regular fa-clock" aria-hidden="true"></i> 4 Weeks</span>
+                </div>
+                <div class="course-progress" aria-label="HTML5 Foundations progress: 25 percent">
+                    <div><span>Learning path</span><strong>25%</strong></div>
+                    <span class="progress-track"><span style="width: 25%"></span></span>
+                </div>
+                <a href="#registration" class="course-cta">Start learning <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+            </article>
+
+            <article class="course-card css-card">
+                <div class="course-card-top">
+                    <div class="course-icon-wrap css-wrap">
+                        <i class="fa-brands fa-css3-alt course-icon css" aria-hidden="true"></i>
+                    </div>
+                    <span class="course-status open"><span></span> Open</span>
+                </div>
+                <h3>CSS3 Interface Lab</h3>
+                <p>Turn structure into polished experiences with layout, responsive systems, and motion.</p>
+                <div class="course-meta">
+                    <span><i class="fa-solid fa-signal" aria-hidden="true"></i> Beginner</span>
+                    <span><i class="fa-regular fa-clock" aria-hidden="true"></i> 5 Weeks</span>
+                </div>
+                <div class="course-progress" aria-label="CSS3 Interface Lab progress: 50 percent">
+                    <div><span>Learning path</span><strong>50%</strong></div>
+                    <span class="progress-track"><span style="width: 50%"></span></span>
+                </div>
+                <a href="#registration" class="course-cta">Explore the lab <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+            </article>
+
+            <article class="course-card js-card">
+                <div class="course-card-top">
+                    <div class="course-icon-wrap js-wrap">
+                        <i class="fa-brands fa-js course-icon js" aria-hidden="true"></i>
+                    </div>
+                    <span class="course-status coming"><span></span> Coming Soon</span>
+                </div>
+                <h3>JavaScript in Practice</h3>
+                <p>Make interfaces feel alive with events, state, APIs, and small projects that solve real problems.</p>
+                <div class="course-meta">
+                    <span><i class="fa-solid fa-signal" aria-hidden="true"></i> Intermediate</span>
+                    <span><i class="fa-regular fa-clock" aria-hidden="true"></i> 8 Weeks</span>
+                </div>
+                <div class="course-progress" aria-label="JavaScript in Practice progress: 0 percent">
+                    <div><span>Learning path</span><strong>0%</strong></div>
+                    <span class="progress-track"><span style="width: 0%"></span></span>
+                </div>
+                <a href="#registration" class="course-cta muted-cta">Get notified <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+            </article>
+
+            <article class="course-card react-card">
+                <div class="course-card-top">
+                    <div class="course-icon-wrap react-wrap">
+                        <i class="fa-brands fa-react course-icon react" aria-hidden="true"></i>
+                    </div>
+                    <span class="course-status closed"><span></span> Closed</span>
+                </div>
+                <h3>React Product Builds</h3>
+                <p>Compose reusable components and ship ambitious frontend products with confidence.</p>
+                <div class="course-meta">
+                    <span><i class="fa-solid fa-signal" aria-hidden="true"></i> Advanced</span>
+                    <span><i class="fa-regular fa-clock" aria-hidden="true"></i> 10 Weeks</span>
+                </div>
+                <div class="course-progress" aria-label="React Product Builds progress: 0 percent">
+                    <div><span>Learning path</span><strong>0%</strong></div>
+                    <span class="progress-track"><span style="width: 0%"></span></span>
+                </div>
+                <a href="#registration" class="course-cta muted-cta">View roadmap <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+            </article>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ===================================================
+                FORM + MEDIA SECTION
+    ==================================================== -->
+
+    <section class="section reveal" id="registration">
+
+        <div class="grid-layout reveal">
+
+            <!-- Registration Form -->
+
+            <div class="card">
+
+                <div class="section-heading">
+
+                    <h2>
+
+                        <i class="fa-solid fa-user-plus" aria-hidden="true"></i>
+
+                        Student Registration
+
+                    </h2>
+                    <p class="form-subtitle">
+                        Start your frontend development journey by registering for your preferred course.
+                    </p>
+
+                </div>
+
+                <form class="custom-form" novalidate>
+
+                    <div class="input-group floating-field">
+
+                        <div class="input-box">
+
+                            <i class="fa-solid fa-user" aria-hidden="true"></i>
+
+                            <input type="text" id="name" placeholder=" " required aria-describedby="name-error">
+                            <label for="name">Full Name</label>
+
+                        </div>
+
+                        <span class="field-message" id="name-error" role="alert"></span>
+
+                    </div>
+
+
+
+                    <div class="input-group floating-field">
+
+                        <div class="input-box">
+
+                            <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+
+                            <input type="email" id="email" placeholder=" " required aria-describedby="email-error">
+                            <label for="email">Email Address</label>
+
+                        </div>
+
+                        <span class="field-message" id="email-error" role="alert"></span>
+
+                    </div>
+
+
+
+                    <div class="input-group floating-field">
+
+                        <div class="input-box">
+
+                            <i class="fa-solid fa-book" aria-hidden="true"></i>
+
+                            <select id="course" required aria-describedby="course-error">
+
+                                <option value="" disabled selected>Select a course</option>
+
+                                <option>HTML5</option>
+
+                                <option>CSS3</option>
+
+                                <option>JavaScript</option>
+
+                                <option>React.js</option>
+
+                            </select>
+                            <label for="course">Select Course</label>
+
+                        </div>
+
+                        <span class="field-message" id="course-error" role="alert"></span>
+
+                    </div>
+
+
+
+                    <div class="input-group floating-field">
+
+                        <div class="input-box">
+
+                            <i class="fa-solid fa-chart-line" aria-hidden="true"></i>
+
+                            <select id="experience" required aria-describedby="experience-error">
+
+                                <option value="" disabled selected>Choose your level</option>
+
+                                <option>Beginner</option>
+
+                                <option>Intermediate</option>
+
+                                <option>Advanced</option>
+
+                            </select>
+                            <label for="experience">Experience Level</label>
+
+                        </div>
+
+                        <span class="field-message" id="experience-error" role="alert"></span>
+
+                    </div>
+
+
+
+                    <button class="submit-btn" type="submit" aria-label="Submit registration form">
+
+                        Join Academy
+
+                        <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+
+                    </button>
+
+                    <div class="form-success" role="status" aria-live="polite" hidden>
+                        <i class="fa-solid fa-circle-check" aria-hidden="true"></i>
+                        <span><strong>You are on the list.</strong> We will be in touch with your next step.</span>
+                    </div>
+
+                </form>
+
+            </div>
+
+            <!-- Media Preview Card -->
+            <div class="card">
+
+                <span class="preview-badge">
+                    <i class="fa-solid fa-play" aria-hidden="true"></i>
+                    Featured Course
+                </span>
+
+                <div class="responsive-video">
+
+                    <video class="responsive-video" controls preload="metadata"
+                        aria-label="Frontend Development Bootcamp preview">
+
+                        <source src="media/practical-media-video.mp4" type="video/mp4">
+
+                        <span class="video-fallback">
+                            <i class="fa-solid fa-circle-play" aria-hidden="true"></i>
+                            <strong>Preview the frontend bootcamp</strong>
+                            <small>Your browser cannot play this video inline.</small>
+                            <a href="media/practical-media-video.mp4" download>Download the preview <i
+                                    class="fa-solid fa-arrow-down" aria-hidden="true"></i></a>
+                        </span>
+
+                    </video>
+
+                </div>
+
+                <div class="video-info">
+
+                    <h3>Frontend Development Bootcamp</h3>
+
+                    <p>
+                        Learn HTML, CSS and JavaScript through premium lessons,
+                        hands-on projects and practical challenges.
+                    </p>
+
+                </div>
+
+                <hr class="divider">
+
+                <div class="audio-header">
+
+                    <i class="fa-solid fa-headphones" aria-hidden="true"></i>
+
+                    <div>
+
+                        <h3>Course Podcast</h3>
+
+                        <p>Listen while travelling or revising.</p>
+
+                    </div>
+
+                </div>
+
+                <audio class="custom-audio" controls>
+
+                    <source src="media/practical-media-audio.mp3" type="audio/mpeg">
+
+                    Your browser does not support the audio element.
+
+                </audio>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ===================================================
+                        FOOTER
+    ==================================================== -->
+
+    <footer class="site-footer reveal" id="footer">
+
+        <div class="footer-main">
+
+            <div class="footer-intro">
+                <a href="#" class="footer-brand">
+                    <span class="footer-brand-mark"><i class="fa-solid fa-code" aria-hidden="true"></i></span>
+                    CodeCraft Academy
+                </a>
+                <p class="footer-note">
+                    Practical frontend learning for curious people who want to build on the web.
+                </p>
+                <div class="footer-socials" aria-label="Social links">
+                    <a href="https://github.com/" target="_blank" rel="noreferrer" aria-label="CodeCraft Academy on GitHub">
+                        <i class="fa-brands fa-github" aria-hidden="true"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/" target="_blank" rel="noreferrer" aria-label="CodeCraft Academy on LinkedIn">
+                        <i class="fa-brands fa-linkedin-in" aria-hidden="true"></i>
+                    </a>
+                    <a href="https://www.youtube.com/" target="_blank" rel="noreferrer" aria-label="CodeCraft Academy on YouTube">
+                        <i class="fa-brands fa-youtube" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </div>
+
+            <nav class="footer-links" aria-label="Footer navigation">
+                <div class="footer-link-group">
+                    <h3>Explore</h3>
+                    <a href="#courses">Courses</a>
+                    <a href="#courses">Projects</a>
+                    <a href="#features">About</a>
+                    <a href="#registration">Contact</a>
+                </div>
+
+                <div class="footer-link-group">
+                    <h3>Resources</h3>
+                    <a href="#courses">Learning Roadmap</a>
+                    <a href="#courses">Challenges</a>
+                    <a href="#registration">FAQ</a>
+                </div>
+            </nav>
+
+        </div>
+
+        <div class="footer-bottom">
+            <p class="footer-text">© 2026 CodeCraft Academy. Built for learning and experimentation.</p>
+            <span>HTML5 <i class="fa-solid fa-heart" aria-hidden="true"></i> CSS3</span>
+        </div>
+
+    </footer>
+
     <script>
-        window.location.replace('.vscode/Forms%2C%20Tables%20and%20Media%20Elements/index.html');
+
+        const reveals = document.querySelectorAll(".reveal");
+
+        function revealSections() {
+
+            reveals.forEach(section => {
+
+                const top = section.getBoundingClientRect().top;
+
+                const visible = window.innerHeight - 120;
+
+                if (top < visible) {
+
+                    section.classList.add("active");
+
+                }
+
+            });
+
+        }
+
+        window.addEventListener("scroll", revealSections);
+
+        revealSections();
+
+        window.addEventListener("load", () => {
+
+            const loader = document.getElementById("loader");
+
+            loader.style.opacity = "0";
+
+            setTimeout(() => {
+
+                loader.style.display = "none";
+
+            }, 700);
+
+        });
+
+        const toggle = document.getElementById("themeToggle");
+
+        const icon = toggle.querySelector("i");
+
+        if (localStorage.getItem("theme") === "dark") {
+
+            document.body.classList.add("dark");
+
+            icon.className = "fa-solid fa-sun";
+
+        }
+
+        toggle.onclick = () => {
+
+            document.body.classList.toggle("dark");
+
+            if (document.body.classList.contains("dark")) {
+
+                icon.className = "fa-solid fa-sun";
+
+                localStorage.setItem("theme", "dark");
+
+            } else {
+
+                icon.className = "fa-solid fa-moon";
+
+                localStorage.setItem("theme", "light");
+
+            }
+
+        }
+
+        const registrationForm = document.querySelector(".custom-form");
+
+        if (registrationForm) {
+
+            const requiredFields = [...registrationForm.querySelectorAll("input[required], select[required]")];
+            const successMessage = registrationForm.querySelector(".form-success");
+
+            function validateField(field) {
+
+                const group = field.closest(".floating-field");
+                const message = group.querySelector(".field-message");
+                let error = "";
+
+                if (!field.value.trim()) {
+
+                    error = field.tagName === "SELECT" ? "Choose an option to continue." : "This field is required.";
+
+                } else if (field.type === "email" && !field.validity.valid) {
+
+                    error = "Enter a valid email address.";
+
+                }
+
+                group.classList.toggle("has-error", Boolean(error));
+                message.textContent = error;
+                field.setAttribute("aria-invalid", String(Boolean(error)));
+
+                return !error;
+
+            }
+
+            requiredFields.forEach(field => {
+
+                field.addEventListener(field.tagName === "SELECT" ? "change" : "input", () => {
+
+                    validateField(field);
+
+                    if (successMessage) {
+                        successMessage.hidden = true;
+                    }
+
+                });
+
+            });
+
+            registrationForm.addEventListener("submit", event => {
+
+                event.preventDefault();
+
+                const isValid = requiredFields.map(validateField).every(Boolean);
+
+                if (!isValid) {
+
+                    requiredFields.find(field => !field.validity.valid || !field.value.trim())?.focus();
+                    return;
+
+                }
+
+                successMessage.hidden = false;
+
+            });
+
+        }
+
+        const observer = new IntersectionObserver(entries => {
+
+            entries.forEach(entry => {
+
+                if (entry.isIntersecting) {
+
+                    entry.target.classList.add("active");
+
+                }
+
+            });
+
+        }, {
+            threshold: .15
+        });
+
+        reveals.forEach(item => observer.observe(item));
+
+        window.addEventListener("scroll", () => {
+
+            document.querySelector(".header")?.classList.toggle(
+
+                "scrolled",
+
+                window.scrollY > 40
+
+            );
+
+        });
+
+        const counters = document.querySelectorAll(".stat-card h2");
+
+        counters.forEach(counter => {
+
+            const target = parseFloat(counter.innerText);
+
+            let count = 0;
+
+            const increment = target / 120;
+
+            const update = () => {
+
+                count += increment;
+
+                if (count < target) {
+
+                    counter.innerText = Math.floor(count) + (counter.innerText.includes("+") ? "+" : "");
+
+                    requestAnimationFrame(update);
+
+                } else {
+
+                    counter.innerText = counter.dataset.target;
+
+                }
+
+            };
+
+            counter.dataset.target = counter.innerText;
+
+            counter.innerText = "0";
+
+            update();
+
+        });
+
     </script>
+
 </body>
+
 </html>
